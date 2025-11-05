@@ -1,49 +1,93 @@
-body
-{
+:root {
+    --color-fondo-enlace: #f1e29093;
+    --color-texto-enlace: black;
+    --tamano-fuente-enlace: larger;
+}
+
+body {
     margin: 0;
     padding: 0;
     background-color: rgb(248, 242, 234);
 }
-.grid-estructura
-{
- display: grid;
- width: 100vw;
- height: 100vh;
- grid-template-columns: [linea-colum-1] 1fr [linea-colum-2] 1fr;
- grid-template-rows: [linea-row-1]1fr [linea-row-2]1fr  [linea-row-3]1fr  [linea-row-2]0.5fr;
+
+.grid-estructura {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: [linea-colum-1] 1fr [linea-colum-2] 1fr;
+    grid-template-rows: [linea-row-1]1fr [linea-row-2]1fr [linea-row-3]1fr [linea-row-4]0.5fr;
+    
+   grid-template-areas:
+        "empleador-icon empleador-text" 
+        "trabajador-icon trabajador-text" 
+        "registro registro"  
+        "footer footer";
 }
-img
-{
+.registro-area {
+    /* Ocupa la fila completa mapeada como "registro registro" */
+    grid-area: registro; 
+
+    /* Puedes agregar estilos para centrar el enlace dentro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
     height: 90px;
     width: 90px;
     padding: 20px;
 }
-.item1
-{
+
+.item1 {
     flex-wrap: wrap;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-a
-{
-   text-decoration: none;
-   font-size: larger;
-   color: black;
-   padding: 7px 7px;
-   background-color:#eead6293;
-   border-radius: 9px 3px;
-   margin-bottom: 30px
+
+
+a {
+    text-decoration: none;
+    font-size: var(--tamano-fuente-enlace); 
+    color: var(--color-texto-enlace);     
+    padding: 7px 7px;
+    background-color: var(--color-fondo-enlace); 
+    border-radius: 9px 3px;
+    margin-bottom: 30px;
+    border-width: 1px;
+    border-color: rgb(10, 10, 10);
+    border-style: solid;
 }
-.item2
-{
-  flex-wrap: wrap;
+
+.item2 {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h4 {
+    font-weight: bold;
+    color: gray;
+}
+
+.texto-descripcion {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+div{
   display: flex;
-  justify-content: center;
   align-items: center;
-}
-h4
-{
-   font-weight: bold;
-   color: gray;
+  justify-content: center
 }
