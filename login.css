@@ -4,50 +4,81 @@
     --tamano-fuente-enlace: larger;
 }
 
+
 body {
     margin: 0;
     padding: 0;
     background-color: rgb(248, 242, 234);
 }
 
-.grid-estructura {
-    display: grid;
-    width: 100vw;
-    height: 100vh;
-    grid-template-columns: [linea-colum-1] 1fr [linea-colum-2] 1fr;
-    grid-template-rows: [linea-row-1]1fr [linea-row-2]1fr [linea-row-3]1fr [linea-row-4]0.5fr;
-    
-   grid-template-areas:
-        "empleador-icon empleador-text" 
-        "trabajador-icon trabajador-text" 
-        "registro registro"  
-        "footer footer";
-}
-.registro-area {
-    /* Ocupa la fila completa mapeada como "registro registro" */
-    grid-area: registro; 
+.grid-estructura{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   display: grid;
+   height: 815px;
+   width: 370px;
+   grid-template-columns: [linea-colum-1] 1fr;
+   grid-template-rows: [linea-row-1] 1fr ;
 
-    /* Puedes agregar estilos para centrar el enlace dentro */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
+.area-cuadrados-contenedor
+{
+  margin-left: 15px;
+  display: grid;
+  width: 340px;
+  grid-template-columns: [linea-colum-1] 1fr;
+  grid-template-rows: [linea-rows-1] 1fr;
+  gap: 25px;
 }
 
-img {
-    height: 90px;
-    width: 90px;
-    padding: 20px;
-}
+ 
 
 .item1 {
     flex-wrap: wrap;
     display: flex;
     justify-content: center;
     align-items: center;
+     width: 340px;
+    height: 189px;
+    border:2px solid #00000093;
+    border-radius: 10px;
+   
+}
+.item2
+{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 340px;
+    height: 189px;
+    border: 2px solid #00000093;
+    border-radius: 10px;
 }
 
 
-a {
+.item3 {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 190px;
+    
+}
+
+.item4 {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 130px;
+   
+
+}
+ a {
     text-decoration: none;
     font-size: var(--tamano-fuente-enlace); 
     color: var(--color-texto-enlace);     
@@ -58,36 +89,19 @@ a {
     border-width: 1px;
     border-color: rgb(10, 10, 10);
     border-style: solid;
-}
+} 
 
-.item2 {
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
+ 
 h4 {
     font-weight: bold;
     color: gray;
 }
 
-.texto-descripcion {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    text-align: center;
-}
 
 .footer {
     grid-area: footer;
     background-color: #333;
-    color: white;
+    color: rgb(26, 9, 9);
     padding: 20px;
     text-align: center;
-}
-div{
-  display: flex;
-  align-items: center;
-  justify-content: center
 }
