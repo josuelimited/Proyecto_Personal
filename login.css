@@ -1,107 +1,25 @@
-:root {
-    --color-fondo-enlace: #f1e29093;
-    --color-texto-enlace: black;
-    --tamano-fuente-enlace: larger;
-}
-
-
-body {
+body
+{
     margin: 0;
-    padding: 0;
-    background-color: rgb(248, 242, 234);
 }
 
-.grid-estructura{
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   display: grid;
-   height: 815px;
-   width: 370px;
-   grid-template-columns: [linea-colum-1] 1fr;
-   grid-template-rows: [linea-row-1] 1fr ;
-
+.grid-contenedores
+{   
+    margin-top: 30xp;
+    margin-left: 12px;
+    height: 450px;
+    width: 350px;
+    display: grid;
+    grid-template-columns:  2fr  ;                                                                     ;
+    grid-template-rows:  [linea-row-2] 50px [linea-row-3] 1fr [linea-row-4] 1fr;
+    gap: 40px;
 }
-.area-cuadrados-contenedor
+
+.empleador
 {
-  margin-left: 15px;
-  display: grid;
-  width: 340px;
-  grid-template-columns: [linea-colum-1] 1fr;
-  grid-template-rows: [linea-rows-1] 1fr;
-  gap: 25px;
-}
-
  
-
-.item1 {
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-     width: 340px;
-    height: 189px;
-    border:2px solid #00000093;
-    border-radius: 10px;
-   
 }
-.item2
+.empleado
 {
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 340px;
-    height: 189px;
-    border: 2px solid #00000093;
-    border-radius: 10px;
-}
 
-
-.item3 {
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 170px;
-    height: 190px;
-    
-}
-
-.item4 {
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
-    height: 130px;
-   
-
-}
- a {
-    text-decoration: none;
-    font-size: var(--tamano-fuente-enlace); 
-    color: var(--color-texto-enlace);     
-    padding: 7px 7px;
-    background-color: var(--color-fondo-enlace); 
-    border-radius: 9px 3px;
-    margin-bottom: 30px;
-    border-width: 1px;
-    border-color: rgb(10, 10, 10);
-    border-style: solid;
-} 
-
- 
-h4 {
-    font-weight: bold;
-    color: gray;
-}
-
-
-.footer {
-    grid-area: footer;
-    background-color: #333;
-    color: rgb(26, 9, 9);
-    padding: 20px;
-    text-align: center;
 }
