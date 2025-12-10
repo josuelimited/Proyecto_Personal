@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicar Trabajo - Trabajos Ya!</title>
+    <link rel="stylesheet" href="css/empleador.css">
+</head>
+
+<body>
+
+    <div class="empleador-container">
+
+        <!-- Botón volver -->
+        <div class="volver">
+            <a href="seleccion.html">← Volver</a>
+        </div>
+
+        <!-- Título -->
+        <div class="titulo">
+            <h1>Publicar Trabajo</h1>
+        </div>
+
+        <!-- Formulario Empleador -->
+        <form class="form-empleador">
+            <div class="input-group">
+                <label for="titulo">Titulo</label>
+                <input type="text" id="titulo" name="titulo" required>
+            </div>
+
+            <div class="input-group">
+                <label for="descripcion">Descripcion</label>
+                <textarea id="descripcion" name="descripcion" rows="3" required></textarea>
+            </div>
+
+            <div class="input-group">
+                <label for="ubicacion_trabajo">Ubicacion_trabajo</label>
+                <input type="text" id="ubicacion_trabajo" name="ubicacion_trabajo" required>
+            </div>
+
+            <div class="input-group">
+                <label for="rol_requerido">Rol_requerido</label>
+                <input type="text" id="rol_requerido" name="rol_requerido" required>
+            </div>
+
+            <div class="input-group">
+                <label for="tipo_contrato">Tipo_contrato</label>
+                <input type="text" id="tipo_contrato" name="tipo_contrato" required>
+            </div>
+
+            <div class="input-group">
+                <label for="horario">Horario</label>
+                <input type="text" id="horario" name="horario" required>
+            </div>
+
+            <div class="input-group">
+                <label for="salario">Salario</label>
+                <input type="text" id="salario" name="salario" required>
+            </div>
+
+            <button type="submit" class="btn-publicar">Publicar</button>
+        </form>
+
+    </div>
+
+</body>
+
+</html>

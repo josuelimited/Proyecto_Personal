@@ -1,0 +1,132 @@
+/* Reset y base - Mobile First 370px */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body usa FLEX para centrar */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(160deg, #0d47a1 0%, #1565c0 40%, #42a5f5 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Contenedor principal - usa GRID */
+.seleccion-container {
+    width: 100%;
+    max-width: 370px;
+    padding: 30px 20px;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 25px;
+}
+
+/* Botón volver */
+.volver a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.volver a:hover {
+    color: #ffffff;
+}
+
+/* Título - usa FLEX para centrar */
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo h1 {
+    font-size: 22px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* Opciones de roles - usa GRID */
+.opciones-roles {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 20px;
+}
+
+/* Card de rol */
+.card-rol {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 15px;
+}
+
+/* Icono de la card */
+.card-icono {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 5px;
+}
+
+.card-icono img {
+    width: 55px;
+    height: 55px;
+}
+
+/* Contenido de la card - usa GRID */
+.card-contenido {
+    display: grid;
+    gap: 10px;
+}
+
+/* Título de la card */
+.card-titulo {
+    font-size: 18px;
+    color: #1565c0;
+    font-weight: 700;
+}
+
+/* Descripción */
+.card-descripcion {
+    font-size: 12px;
+    color: #666666;
+    font-style: italic;
+}
+
+/* Lista de beneficios */
+.card-beneficios {
+    list-style: none;
+    display: grid;
+    gap: 5px;
+}
+
+.card-beneficios li {
+    font-size: 11px;
+    color: #444444;
+}
+
+/* Botón de la card - SOLO ESTE ES CLICKEABLE */
+.card-boton {
+    display: inline-block;
+    background-color: #1565c0;
+    color: #ffffff;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    width: fit-content;
+}
+
+.card-boton:hover {
+    background-color: #0d47a1;
+}

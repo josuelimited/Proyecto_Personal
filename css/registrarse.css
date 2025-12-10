@@ -1,0 +1,145 @@
+/* Reset y base - Mobile First 370px */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body usa FLEX para centrar el contenedor */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(160deg, #0d47a1 0%, #1565c0 40%, #42a5f5 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Contenedor principal - usa GRID para espaciado interno */
+.registro-container {
+    width: 100%;
+    max-width: 370px;
+    padding: 30px 20px;
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    gap: 30px;
+}
+
+/* Botón volver */
+.volver a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.volver a:hover {
+    color: #ffffff;
+}
+
+/* Logo y título - usa FLEX para centrar */
+.logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    width: 90px;
+    height: 90px;
+}
+
+.logo h1 {
+    font-size: 26px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* Formulario - usa GRID para espaciado */
+.form-registro {
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    gap: 20px;
+}
+
+/* Input group - usa GRID */
+.input-group {
+    display: grid;
+    gap: 10px;
+}
+
+.input-group label {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    color: #ffffff;
+    outline: none;
+}
+
+.input-group input:focus {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Botón seleccionar - centrado */
+.btn-seleccionar {
+    width: 160px;
+    padding: 16px 30px;
+    background-color: #1565c0;
+    border: none;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    justify-self: center;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+}
+
+.btn-seleccionar:hover {
+    background-color: #0d47a1;
+}
+
+/* Link de login */
+.login-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-link p {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.login-link a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.login-link a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}

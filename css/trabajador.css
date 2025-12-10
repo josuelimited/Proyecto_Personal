@@ -1,0 +1,168 @@
+/* Reset y base - Mobile First 370px */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body usa FLEX para centrar */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(160deg, #0d47a1 0%, #1565c0 40%, #42a5f5 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Contenedor principal - usa GRID */
+.trabajador-container {
+    width: 100%;
+    max-width: 370px;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    gap: 20px;
+}
+
+/* Navbar con búsqueda - usa FLEX */
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.volver {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* Barra de búsqueda - usa FLEX */
+.barra-busqueda {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 25px;
+    padding: 12px 18px;
+    flex: 1;
+    gap: 10px;
+}
+
+.lupa {
+    font-size: 16px;
+}
+
+.barra-busqueda input {
+    background: none;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 300;
+    width: 100%;
+}
+
+.barra-busqueda input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 300;
+}
+
+/* Título */
+.titulo {
+    display: flex;
+    align-items: center;
+}
+
+.titulo h2 {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Lista de trabajos - usa GRID */
+.lista-trabajos {
+    display: grid;
+    gap: 15px;
+}
+
+/* Card de trabajo */
+.card-trabajo {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 18px;
+    display: grid;
+    gap: 12px;
+}
+
+/* Header de la card - usa GRID */
+.card-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 10px;
+}
+
+.icono-persona {
+    font-size: 20px;
+}
+
+.nombre-empleador {
+    font-size: 13px;
+    color: #333333;
+    font-weight: 500;
+}
+
+.cel-empleador {
+    font-size: 12px;
+    color: #666666;
+}
+
+/* Body de la card - usa GRID */
+.card-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.trabajo-nombre {
+    font-size: 13px;
+    color: #1565c0;
+    font-weight: 600;
+    grid-column: 1;
+}
+
+.trabajo-horario {
+    font-size: 11px;
+    color: #666666;
+    grid-column: 2;
+    text-align: right;
+}
+
+.trabajo-pago {
+    font-size: 13px;
+    color: #1565c0;
+    font-weight: 600;
+    grid-column: 1;
+}
+
+/* Footer de la card - usa FLEX */
+.card-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-postular {
+    background-color: #ffcdd2;
+    color: #333333;
+    padding: 8px 25px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.btn-postular:hover {
+    background-color: #ef9a9a;
+}
