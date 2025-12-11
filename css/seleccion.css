@@ -1,44 +1,44 @@
-/* Reset y base - Mobile First 370px */
+@import url('customproperties.css');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body usa FLEX para centrar */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(160deg, #0d47a1 0%, #1565c0 40%, #42a5f5 100%);
+    font-family: var(--font-family);
+    background: linear-gradient(160deg, var(--color-primary-dark) 0%, var(--color-primary) 40%, var(--color-primary-light) 100%);
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: var(--spacing-xlarge);
 }
 
-/* Contenedor principal - usa GRID */
 .seleccion-container {
     width: 100%;
-    max-width: 370px;
-    padding: 30px 20px;
+    max-width: var(--max-width-mobile);
+    padding: 30px var(--spacing-xlarge);
     display: grid;
+    grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
-    gap: 25px;
+    gap: var(--spacing-xxlarge);
 }
 
-/* Botón volver */
+.volver {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
 .volver a {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 14px;
+    color: var(--text-white-soft);
+    font-size: var(--font-size-base);
     font-weight: 500;
 }
 
-.volver a:hover {
-    color: #ffffff;
-}
-
-/* Título - usa FLEX para centrar */
 .titulo {
     display: flex;
     justify-content: center;
@@ -46,87 +46,79 @@ body {
 }
 
 .titulo h1 {
-    font-size: 22px;
-    color: #ffffff;
+    font-size: var(--font-size-title);
+    color: var(--color-white);
     font-weight: 700;
 }
 
-/* Opciones de roles - usa GRID */
 .opciones-roles {
     display: grid;
+    grid-template-columns: 1fr;
     grid-template-rows: auto auto;
-    gap: 20px;
+    gap: var(--spacing-xlarge);
 }
 
-/* Card de rol */
 .card-rol {
-    background: #ffffff;
-    border-radius: 15px;
-    padding: 20px;
+    background: var(--color-white);
+    border-radius: var(--border-radius-medium);
+    padding: var(--spacing-xlarge);
     display: grid;
-    grid-template-columns: 70px 1fr;
-    gap: 15px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: var(--spacing-large);
 }
 
-/* Icono de la card */
 .card-icono {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    padding-top: 5px;
 }
 
 .card-icono img {
-    width: 55px;
-    height: 55px;
+    width: 50px;
+    height: 50px;
 }
 
-/* Contenido de la card - usa GRID */
 .card-contenido {
     display: grid;
-    gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: var(--spacing-medium);
+    text-align: center;
 }
 
-/* Título de la card */
 .card-titulo {
-    font-size: 18px;
-    color: #1565c0;
+    font-size: var(--font-size-xlarge);
+    color: var(--color-primary);
     font-weight: 700;
 }
 
-/* Descripción */
 .card-descripcion {
-    font-size: 12px;
-    color: #666666;
-    font-style: italic;
+    font-size: var(--font-size-medium);
+    color: var(--color-gray);
 }
 
-/* Lista de beneficios */
 .card-beneficios {
     list-style: none;
     display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
     gap: 5px;
 }
 
 .card-beneficios li {
-    font-size: 11px;
-    color: #444444;
+    font-size: var(--font-size-normal);
+    color: var(--color-gray);
 }
 
-/* Botón de la card - SOLO ESTE ES CLICKEABLE */
 .card-boton {
-    display: inline-block;
-    background-color: #1565c0;
-    color: #ffffff;
-    padding: 10px 25px;
-    border-radius: 20px;
-    font-size: 13px;
+    padding: var(--spacing-medium) var(--spacing-xlarge);
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: var(--border-radius-pill);
+    color: var(--color-white);
+    font-size: var(--font-size-medium);
     font-weight: 600;
     text-decoration: none;
     text-align: center;
-    width: fit-content;
-}
-
-.card-boton:hover {
-    background-color: #0d47a1;
+    cursor: pointer;
 }

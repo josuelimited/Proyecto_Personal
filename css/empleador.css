@@ -1,44 +1,44 @@
-/* Reset y base - Mobile First 370px */
+@import url('customproperties.css');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body usa FLEX para centrar el contenedor */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(160deg, #0d47a1 0%, #1565c0 40%, #42a5f5 100%);
+    font-family: var(--font-family);
+    background: linear-gradient(160deg, var(--color-primary-dark) 0%, var(--color-primary) 40%, var(--color-primary-light) 100%);
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: var(--spacing-xlarge);
 }
 
-/* Contenedor principal - usa GRID para espaciado interno */
 .empleador-container {
     width: 100%;
-    max-width: 370px;
-    padding: 30px 20px;
+    max-width: var(--max-width-mobile);
+    padding: 30px var(--spacing-xlarge);
     display: grid;
+    grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
-    gap: 25px;
+    gap: var(--spacing-xxlarge);
 }
 
-/* Botón volver */
+.volver {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
 .volver a {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 14px;
+    color: var(--text-white-soft);
+    font-size: var(--font-size-base);
     font-weight: 500;
 }
 
-.volver a:hover {
-    color: #ffffff;
-}
-
-/* Título - usa FLEX para centrar */
 .titulo {
     display: flex;
     justify-content: center;
@@ -46,25 +46,27 @@ body {
 }
 
 .titulo h1 {
-    font-size: 22px;
-    color: #ffffff;
+    font-size: var(--font-size-title);
+    color: var(--color-white);
     font-weight: 700;
 }
 
-/* Formulario - usa GRID para espaciado */
 .form-empleador {
     display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto auto;
     gap: 18px;
 }
 
-/* Input group - usa GRID */
 .input-group {
     display: grid;
-    gap: 8px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: var(--spacing-small);
 }
 
 .input-group label {
-    font-size: 12px;
+    font-size: var(--font-size-normal);
     color: rgba(255, 255, 255, 0.9);
     font-weight: 600;
     text-transform: uppercase;
@@ -75,42 +77,35 @@ body {
 .input-group textarea {
     width: 100%;
     padding: 14px 18px;
-    background: rgba(255, 255, 255, 0.15);
+    background: var(--bg-glass);
     border: none;
-    border-radius: 20px;
-    font-size: 14px;
-    color: #ffffff;
+    border-radius: var(--border-radius-large);
+    font-size: var(--font-size-base);
+    color: var(--color-white);
     outline: none;
     font-family: inherit;
 }
 
 .input-group textarea {
     resize: none;
-    border-radius: 15px;
+    border-radius: var(--border-radius-medium);
 }
 
-.input-group input:focus,
-.input-group textarea:focus {
-    background: rgba(255, 255, 255, 0.25);
-}
-
-/* Botón publicar - centrado */
 .btn-publicar {
     width: 160px;
     padding: 14px 30px;
-    background-color: #1565c0;
+    background-color: var(--color-primary);
     border: none;
-    border-radius: 30px;
-    color: #ffffff;
-    font-size: 14px;
+    border-radius: var(--border-radius-full);
+    color: var(--color-white);
+    font-size: var(--font-size-base);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
     cursor: pointer;
     justify-self: center;
-    margin-top: 10px;
-}
-
-.btn-publicar:hover {
-    background-color: #0d47a1;
+    margin-top: var(--spacing-medium);
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
 }

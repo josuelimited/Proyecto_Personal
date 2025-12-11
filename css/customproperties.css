@@ -1,0 +1,47 @@
+:root {
+    --color-primary-dark: #0d47a1;
+    --color-primary: #1565c0;
+    --color-primary-light: #42a5f5;
+
+    --color-white: #ffffff;
+    --color-black: #333333;
+    --color-gray: #666666;
+    --color-gray-light: #888888;
+
+    --color-success: #43a047;
+    --color-success-light: #66bb6a;
+    --color-success-bg: #c8e6c9;
+
+    --color-btn-pink: #ffcdd2;
+    --color-btn-pink-hover: #ef9a9a;
+
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    --font-size-small: 11px;
+    --font-size-normal: 12px;
+    --font-size-medium: 13px;
+    --font-size-base: 14px;
+    --font-size-large: 16px;
+    --font-size-xlarge: 18px;
+    --font-size-title: 22px;
+    --font-size-hero: 26px;
+
+    --border-radius-small: 12px;
+    --border-radius-medium: 15px;
+    --border-radius-large: 20px;
+    --border-radius-pill: 25px;
+    --border-radius-full: 30px;
+
+    --max-width-mobile: 370px;
+
+    --spacing-small: 8px;
+    --spacing-medium: 10px;
+    --spacing-large: 15px;
+    --spacing-xlarge: 20px;
+    --spacing-xxlarge: 25px;
+
+    --bg-glass: rgba(255, 255, 255, 0.15);
+    --bg-glass-hover: rgba(255, 255, 255, 0.25);
+    --text-white-soft: rgba(255, 255, 255, 0.8);
+    --text-white-muted: rgba(255, 255, 255, 0.6);
+}

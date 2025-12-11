@@ -1,0 +1,201 @@
+@import url('customproperties.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background: linear-gradient(160deg, var(--color-primary-dark) 0%, var(--color-primary) 40%, var(--color-primary-light) 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: var(--spacing-xlarge);
+}
+
+.publicaciones-container {
+    width: 100%;
+    max-width: var(--max-width-mobile);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    gap: var(--spacing-xlarge);
+}
+
+.volver {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+.volver a {
+    text-decoration: none;
+    color: var(--text-white-soft);
+    font-size: var(--font-size-base);
+    font-weight: 500;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+}
+
+.titulo h1 {
+    font-size: var(--font-size-title);
+    color: var(--color-white);
+    font-weight: 700;
+}
+
+.trabajo-publicado {
+    background: var(--color-white);
+    border-radius: var(--border-radius-medium);
+    padding: var(--spacing-xlarge);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: var(--spacing-large);
+}
+
+.trabajo-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-medium);
+}
+
+.trabajo-header h2 {
+    font-size: var(--font-size-large);
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.trabajo-detalles {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    gap: var(--spacing-small);
+}
+
+.trabajo-detalles .detalle {
+    font-size: var(--font-size-normal);
+    color: #444444;
+    line-height: 1.4;
+}
+
+.trabajo-estado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--spacing-medium);
+    border-top: 1px solid #eeeeee;
+}
+
+.badge-activo {
+    background: var(--color-success-bg);
+    color: #2e7d32;
+    padding: 5px var(--spacing-normal);
+    border-radius: var(--border-radius-medium);
+    font-size: var(--font-size-small);
+    font-weight: 600;
+}
+
+.postulantes-count {
+    font-size: var(--font-size-normal);
+    color: var(--color-gray);
+    font-weight: 500;
+}
+
+.titulo-postulantes {
+    display: flex;
+    align-items: center;
+}
+
+.titulo-postulantes h2 {
+    font-size: var(--font-size-large);
+    color: var(--color-white);
+    font-weight: 600;
+}
+
+.lista-postulantes {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: var(--spacing-large);
+}
+
+.card-postulante {
+    background: var(--color-white);
+    border-radius: var(--border-radius-medium);
+    padding: 18px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 12px;
+}
+
+.postulante-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-normal);
+}
+
+.foto-postulante {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.postulante-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 2px;
+}
+
+.nombre-postulante {
+    font-size: var(--font-size-base);
+    color: var(--color-black);
+    font-weight: 600;
+}
+
+.rol-postulante {
+    font-size: var(--font-size-normal);
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+.postulante-body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: var(--spacing-small);
+    padding: var(--spacing-medium) 0;
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.postulante-body p {
+    font-size: var(--font-size-normal);
+    color: #555555;
+    line-height: 1.4;
+}
+
+.postulante-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-contratar {
+    background: var(--color-success);
+    color: var(--color-white);
+    padding: var(--spacing-medium) var(--spacing-xxlarge);
+    border-radius: var(--border-radius-pill);
+    font-size: var(--font-size-normal);
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
