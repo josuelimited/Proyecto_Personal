@@ -1,11 +1,17 @@
+/* ========================================
+   BUSQUEDA.CSS - Página de búsqueda de trabajos
+   ======================================== */
+
 @import url('customproperties.css');
 
+/* ----- Reset básico ----- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ----- Estilos del body ----- */
 body {
     font-family: var(--font-family);
     background: linear-gradient(160deg, var(--color-primary-dark) 0%, var(--color-primary) 40%, var(--color-primary-light) 100%);
@@ -15,6 +21,7 @@ body {
     padding: var(--spacing-xlarge);
 }
 
+/* ----- Contenedor principal ----- */
 .busqueda-container {
     width: 100%;
     max-width: var(--max-width-mobile);
@@ -24,6 +31,7 @@ body {
     gap: var(--spacing-xlarge);
 }
 
+/* ----- Barra de navegación ----- */
 .navbar {
     display: flex;
     align-items: center;
@@ -31,6 +39,7 @@ body {
     padding: var(--spacing-medium) 0;
 }
 
+/* ----- Enlace volver ----- */
 .volver {
     color: var(--color-white);
     text-decoration: none;
@@ -38,6 +47,7 @@ body {
     font-weight: 500;
 }
 
+/* ----- Barra de búsqueda ----- */
 .barra-busqueda {
     display: flex;
     align-items: center;
@@ -48,6 +58,7 @@ body {
     gap: var(--spacing-medium);
 }
 
+/* ----- Input de búsqueda ----- */
 .barra-busqueda input {
     background: none;
     border: none;
@@ -63,6 +74,7 @@ body {
     font-weight: 300;
 }
 
+/* ----- Título de sección ----- */
 .titulo {
     display: flex;
     align-items: center;
@@ -74,6 +86,7 @@ body {
     font-weight: 600;
 }
 
+/* ----- Lista de trabajos (grid) ----- */
 .lista-trabajos {
     display: grid;
     grid-template-columns: 1fr;
@@ -81,6 +94,7 @@ body {
     gap: var(--spacing-large);
 }
 
+/* ----- Card de trabajo ----- */
 .card-trabajo {
     background: var(--color-white);
     border-radius: var(--border-radius-medium);
@@ -91,6 +105,7 @@ body {
     gap: 12px;
 }
 
+/* ----- Header de la card ----- */
 .card-header {
     display: grid;
     grid-template-columns: auto 1fr auto;
@@ -99,6 +114,7 @@ body {
     gap: var(--spacing-medium);
 }
 
+/* ----- Foto del empleador ----- */
 .foto-empleador {
     width: 35px;
     height: 35px;
@@ -106,17 +122,24 @@ body {
     object-fit: cover;
 }
 
+/* ----- Nombre del empleador ----- */
 .nombre-empleador {
     font-size: var(--font-size-medium);
     color: var(--color-black);
     font-weight: 500;
 }
 
-.cel-empleador {
+/* ----- Calificación del empleador ----- */
+.calificacion-empleador {
     font-size: var(--font-size-normal);
-    color: var(--color-gray);
+    color: #f59e0b;
+    font-weight: 600;
+    background: rgba(245, 158, 11, 0.15);
+    padding: 4px 10px;
+    border-radius: var(--border-radius-large);
 }
 
+/* ----- Body de la card ----- */
 .card-body {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -124,6 +147,7 @@ body {
     gap: var(--spacing-small);
 }
 
+/* ----- Nombre del trabajo ----- */
 .trabajo-nombre {
     font-size: var(--font-size-medium);
     color: var(--color-primary);
@@ -131,6 +155,7 @@ body {
     grid-column: 1;
 }
 
+/* ----- Horario del trabajo ----- */
 .trabajo-horario {
     font-size: var(--font-size-small);
     color: var(--color-gray);
@@ -138,6 +163,7 @@ body {
     text-align: right;
 }
 
+/* ----- Pago del trabajo ----- */
 .trabajo-pago {
     font-size: var(--font-size-medium);
     color: var(--color-primary);
@@ -145,6 +171,7 @@ body {
     grid-column: 1;
 }
 
+/* ----- Ubicación del trabajo ----- */
 .trabajo-ubicacion {
     font-size: var(--font-size-small);
     color: var(--color-gray-light);
@@ -152,11 +179,13 @@ body {
     margin-top: 5px;
 }
 
+/* ----- Footer de la card ----- */
 .card-footer {
     display: flex;
     justify-content: flex-end;
 }
 
+/* ----- Botón postular ----- */
 .btn-postular {
     background-color: var(--color-btn-pink);
     color: var(--color-black);
@@ -165,4 +194,119 @@ body {
     font-size: var(--font-size-normal);
     font-weight: 500;
     text-decoration: none;
+}
+
+/* ========================================
+   TABLET (768px+)
+   ======================================== */
+@media (min-width: 768px) {
+    .busqueda-container {
+        max-width: var(--max-width-tablet);
+        padding: var(--spacing-xlarge);
+    }
+
+    .titulo h2 {
+        font-size: 24px;
+    }
+
+    /* Grid de 2 columnas en tablet */
+    .lista-trabajos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card-trabajo {
+        padding: 24px;
+    }
+
+    .foto-empleador {
+        width: 45px;
+        height: 45px;
+    }
+
+    .nombre-empleador {
+        font-size: var(--font-size-base);
+    }
+
+    .trabajo-nombre {
+        font-size: var(--font-size-large);
+    }
+
+    .trabajo-pago {
+        font-size: var(--font-size-large);
+    }
+
+    .barra-busqueda {
+        padding: 16px 24px;
+    }
+
+    .barra-busqueda input {
+        font-size: var(--font-size-large);
+    }
+}
+
+/* ========================================
+   DESKTOP (1024px+)
+   ======================================== */
+@media (min-width: 1024px) {
+    .busqueda-container {
+        max-width: var(--max-width-desktop);
+        padding: var(--spacing-xxlarge);
+    }
+
+    .navbar {
+        gap: var(--spacing-xlarge);
+    }
+
+    .volver {
+        font-size: 20px;
+    }
+
+    .titulo h2 {
+        font-size: 28px;
+    }
+
+    /* Grid de 3 columnas en desktop */
+    .lista-trabajos {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-xlarge);
+    }
+
+    .card-trabajo {
+        padding: 28px;
+        gap: 16px;
+    }
+
+    .foto-empleador {
+        width: 50px;
+        height: 50px;
+    }
+
+    .nombre-empleador {
+        font-size: var(--font-size-large);
+    }
+
+    .trabajo-nombre {
+        font-size: var(--font-size-xlarge);
+    }
+
+    .trabajo-pago {
+        font-size: var(--font-size-xlarge);
+    }
+
+    .trabajo-horario {
+        font-size: var(--font-size-medium);
+    }
+
+    .trabajo-ubicacion {
+        font-size: var(--font-size-medium);
+    }
+
+    .btn-postular {
+        padding: var(--spacing-medium) var(--spacing-xxlarge);
+        font-size: var(--font-size-medium);
+    }
+
+    .barra-busqueda {
+        max-width: 500px;
+    }
 }

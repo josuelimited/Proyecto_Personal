@@ -1,11 +1,17 @@
+/* ========================================
+   PUBLICACIONES.CSS - Página de publicaciones y postulantes
+   ======================================== */
+
 @import url('customproperties.css');
 
+/* ----- Reset básico ----- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ----- Estilos del body ----- */
 body {
     font-family: var(--font-family);
     background: linear-gradient(160deg, var(--color-primary-dark) 0%, var(--color-primary) 40%, var(--color-primary-light) 100%);
@@ -15,6 +21,7 @@ body {
     padding: var(--spacing-xlarge);
 }
 
+/* ----- Contenedor principal ----- */
 .publicaciones-container {
     width: 100%;
     max-width: var(--max-width-mobile);
@@ -24,6 +31,7 @@ body {
     gap: var(--spacing-xlarge);
 }
 
+/* ----- Enlace volver ----- */
 .volver {
     display: grid;
     grid-template-columns: 1fr;
@@ -37,6 +45,7 @@ body {
     font-weight: 500;
 }
 
+/* ----- Título principal ----- */
 .titulo {
     display: flex;
     justify-content: center;
@@ -48,6 +57,7 @@ body {
     font-weight: 700;
 }
 
+/* ----- Card de trabajo publicado ----- */
 .trabajo-publicado {
     background: var(--color-white);
     border-radius: var(--border-radius-medium);
@@ -58,6 +68,7 @@ body {
     gap: var(--spacing-large);
 }
 
+/* ----- Header del trabajo ----- */
 .trabajo-header {
     display: flex;
     align-items: center;
@@ -70,6 +81,7 @@ body {
     font-weight: 700;
 }
 
+/* ----- Detalles del trabajo ----- */
 .trabajo-detalles {
     display: grid;
     grid-template-columns: 1fr;
@@ -83,6 +95,7 @@ body {
     line-height: 1.4;
 }
 
+/* ----- Estado del trabajo ----- */
 .trabajo-estado {
     display: flex;
     justify-content: space-between;
@@ -91,6 +104,7 @@ body {
     border-top: 1px solid #eeeeee;
 }
 
+/* ----- Badge activo ----- */
 .badge-activo {
     background: var(--color-success-bg);
     color: #2e7d32;
@@ -100,12 +114,14 @@ body {
     font-weight: 600;
 }
 
+/* ----- Contador de postulantes ----- */
 .postulantes-count {
     font-size: var(--font-size-normal);
     color: var(--color-gray);
     font-weight: 500;
 }
 
+/* ----- Título de postulantes ----- */
 .titulo-postulantes {
     display: flex;
     align-items: center;
@@ -117,6 +133,7 @@ body {
     font-weight: 600;
 }
 
+/* ----- Lista de postulantes (grid) ----- */
 .lista-postulantes {
     display: grid;
     grid-template-columns: 1fr;
@@ -124,6 +141,7 @@ body {
     gap: var(--spacing-large);
 }
 
+/* ----- Card de postulante ----- */
 .card-postulante {
     background: var(--color-white);
     border-radius: var(--border-radius-medium);
@@ -134,12 +152,14 @@ body {
     gap: 12px;
 }
 
+/* ----- Header del postulante ----- */
 .postulante-header {
     display: flex;
     align-items: center;
     gap: var(--spacing-normal);
 }
 
+/* ----- Foto del postulante ----- */
 .foto-postulante {
     width: 50px;
     height: 50px;
@@ -148,6 +168,7 @@ body {
     object-fit: cover;
 }
 
+/* ----- Info del postulante ----- */
 .postulante-info {
     display: grid;
     grid-template-columns: 1fr;
@@ -155,18 +176,21 @@ body {
     gap: 2px;
 }
 
+/* ----- Nombre del postulante ----- */
 .nombre-postulante {
     font-size: var(--font-size-base);
     color: var(--color-black);
     font-weight: 600;
 }
 
+/* ----- Rol del postulante ----- */
 .rol-postulante {
     font-size: var(--font-size-normal);
     color: var(--color-primary);
     font-weight: 500;
 }
 
+/* ----- Body del postulante ----- */
 .postulante-body {
     display: grid;
     grid-template-columns: 1fr;
@@ -183,11 +207,30 @@ body {
     line-height: 1.4;
 }
 
+.postulante-body .ocupacion {
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+.postulante-body .habilidades {
+    background: rgba(103, 58, 183, 0.08);
+    padding: 8px 12px;
+    border-radius: var(--border-radius-medium);
+    font-size: var(--font-size-small);
+}
+
+.postulante-body .experiencia {
+    color: #2e7d32;
+    font-weight: 500;
+}
+
+/* ----- Footer del postulante ----- */
 .postulante-footer {
     display: flex;
     justify-content: flex-end;
 }
 
+/* ----- Botón contratar ----- */
 .btn-contratar {
     background: var(--color-success);
     color: var(--color-white);
@@ -198,4 +241,143 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+}
+
+/* ========================================
+   TABLET (768px+)
+   ======================================== */
+@media (min-width: 768px) {
+    .publicaciones-container {
+        max-width: var(--max-width-tablet);
+        padding: var(--spacing-xxlarge);
+    }
+
+    .titulo h1 {
+        font-size: 28px;
+    }
+
+    .trabajo-publicado {
+        padding: var(--spacing-xxlarge);
+    }
+
+    .trabajo-header h2 {
+        font-size: var(--font-size-xlarge);
+    }
+
+    .trabajo-detalles .detalle {
+        font-size: var(--font-size-medium);
+    }
+
+    .titulo-postulantes h2 {
+        font-size: var(--font-size-xlarge);
+    }
+
+    /* Grid de 2 columnas en tablet */
+    .lista-postulantes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card-postulante {
+        padding: 24px;
+    }
+
+    .foto-postulante {
+        width: 60px;
+        height: 60px;
+    }
+
+    .nombre-postulante {
+        font-size: var(--font-size-large);
+    }
+
+    .rol-postulante {
+        font-size: var(--font-size-medium);
+    }
+
+    .postulante-body p {
+        font-size: var(--font-size-medium);
+    }
+}
+
+/* ========================================
+   DESKTOP (1024px+)
+   ======================================== */
+@media (min-width: 1024px) {
+    .publicaciones-container {
+        max-width: var(--max-width-desktop);
+        padding: var(--spacing-xxlarge);
+        gap: var(--spacing-xxlarge);
+    }
+
+    .titulo h1 {
+        font-size: 32px;
+    }
+
+    .volver a {
+        font-size: var(--font-size-large);
+    }
+
+    .trabajo-publicado {
+        padding: 35px;
+        gap: var(--spacing-xlarge);
+    }
+
+    .trabajo-header h2 {
+        font-size: 22px;
+    }
+
+    .trabajo-detalles .detalle {
+        font-size: var(--font-size-base);
+    }
+
+    .badge-activo {
+        padding: 8px 16px;
+        font-size: var(--font-size-medium);
+    }
+
+    .postulantes-count {
+        font-size: var(--font-size-medium);
+    }
+
+    .titulo-postulantes h2 {
+        font-size: 22px;
+    }
+
+    /* Grid de 3 columnas en desktop */
+    .lista-postulantes {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-xlarge);
+    }
+
+    .card-postulante {
+        padding: 28px;
+        gap: 16px;
+    }
+
+    .foto-postulante {
+        width: 70px;
+        height: 70px;
+    }
+
+    .nombre-postulante {
+        font-size: var(--font-size-xlarge);
+    }
+
+    .rol-postulante {
+        font-size: var(--font-size-base);
+    }
+
+    .postulante-body p {
+        font-size: var(--font-size-base);
+    }
+
+    .postulante-body .habilidades {
+        font-size: var(--font-size-medium);
+        padding: 10px 16px;
+    }
+
+    .btn-contratar {
+        padding: var(--spacing-medium) 35px;
+        font-size: var(--font-size-medium);
+    }
 }

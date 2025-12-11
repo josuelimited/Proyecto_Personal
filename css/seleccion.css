@@ -1,11 +1,17 @@
+/* ========================================
+   SELECCION.CSS - Página de selección de rol
+   ======================================== */
+
 @import url('customproperties.css');
 
+/* ----- Reset básico ----- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ----- Estilos del body ----- */
 body {
     font-family: var(--font-family);
     background: linear-gradient(160deg, var(--color-primary-dark) 0%, var(--color-primary) 40%, var(--color-primary-light) 100%);
@@ -16,6 +22,7 @@ body {
     padding: var(--spacing-xlarge);
 }
 
+/* ----- Contenedor principal ----- */
 .seleccion-container {
     width: 100%;
     max-width: var(--max-width-mobile);
@@ -26,6 +33,7 @@ body {
     gap: var(--spacing-xxlarge);
 }
 
+/* ----- Enlace volver ----- */
 .volver {
     display: grid;
     grid-template-columns: 1fr;
@@ -39,6 +47,7 @@ body {
     font-weight: 500;
 }
 
+/* ----- Título principal ----- */
 .titulo {
     display: flex;
     justify-content: center;
@@ -51,6 +60,7 @@ body {
     font-weight: 700;
 }
 
+/* ----- Opciones de roles (grid) ----- */
 .opciones-roles {
     display: grid;
     grid-template-columns: 1fr;
@@ -58,6 +68,7 @@ body {
     gap: var(--spacing-xlarge);
 }
 
+/* ----- Card de rol ----- */
 .card-rol {
     background: var(--color-white);
     border-radius: var(--border-radius-medium);
@@ -68,6 +79,7 @@ body {
     gap: var(--spacing-large);
 }
 
+/* ----- Icono de la card ----- */
 .card-icono {
     display: flex;
     justify-content: center;
@@ -78,6 +90,7 @@ body {
     height: 50px;
 }
 
+/* ----- Contenido de la card ----- */
 .card-contenido {
     display: grid;
     grid-template-columns: 1fr;
@@ -86,17 +99,20 @@ body {
     text-align: center;
 }
 
+/* ----- Título de la card ----- */
 .card-titulo {
     font-size: var(--font-size-xlarge);
     color: var(--color-primary);
     font-weight: 700;
 }
 
+/* ----- Descripción de la card ----- */
 .card-descripcion {
     font-size: var(--font-size-medium);
     color: var(--color-gray);
 }
 
+/* ----- Lista de beneficios ----- */
 .card-beneficios {
     list-style: none;
     display: grid;
@@ -110,6 +126,7 @@ body {
     color: var(--color-gray);
 }
 
+/* ----- Botón de la card ----- */
 .card-boton {
     padding: var(--spacing-medium) var(--spacing-xlarge);
     background-color: var(--color-primary);
@@ -121,4 +138,104 @@ body {
     text-decoration: none;
     text-align: center;
     cursor: pointer;
+}
+
+/* ========================================
+   TABLET (768px+)
+   ======================================== */
+@media (min-width: 768px) {
+    .seleccion-container {
+        max-width: 700px;
+        padding: 40px var(--spacing-xxlarge);
+    }
+
+    .titulo h1 {
+        font-size: 28px;
+    }
+
+    /* Grid de 2 columnas en tablet */
+    .opciones-roles {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-xlarge);
+    }
+
+    .card-rol {
+        padding: var(--spacing-xxlarge);
+    }
+
+    .card-icono img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .card-titulo {
+        font-size: 20px;
+    }
+
+    .card-descripcion {
+        font-size: var(--font-size-base);
+    }
+
+    .card-beneficios li {
+        font-size: var(--font-size-medium);
+    }
+
+    .card-boton {
+        padding: var(--spacing-medium) var(--spacing-xxlarge);
+        font-size: var(--font-size-base);
+    }
+}
+
+/* ========================================
+   DESKTOP (1024px+)
+   ======================================== */
+@media (min-width: 1024px) {
+    .seleccion-container {
+        max-width: 900px;
+        padding: 50px 40px;
+        gap: 40px;
+    }
+
+    .titulo h1 {
+        font-size: 36px;
+    }
+
+    .volver a {
+        font-size: var(--font-size-large);
+    }
+
+    .opciones-roles {
+        gap: var(--spacing-xxlarge);
+    }
+
+    .card-rol {
+        padding: 35px;
+        gap: var(--spacing-xlarge);
+    }
+
+    .card-icono img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .card-titulo {
+        font-size: 24px;
+    }
+
+    .card-descripcion {
+        font-size: var(--font-size-large);
+    }
+
+    .card-beneficios {
+        gap: 8px;
+    }
+
+    .card-beneficios li {
+        font-size: var(--font-size-base);
+    }
+
+    .card-boton {
+        padding: var(--spacing-large) var(--spacing-xxlarge);
+        font-size: var(--font-size-large);
+    }
 }

@@ -1,17 +1,24 @@
+/* ========================================
+   STYLE.CSS - Página principal (index)
+   ======================================== */
+
 @import url('customproperties.css');
 
+/* ----- Reset básico ----- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ----- Estilos del body ----- */
 body {
     display: flex;
     background: linear-gradient(160deg, var(--color-primary-dark) 0%, var(--color-primary) 40%, var(--color-primary-light) 100%);
     min-height: 100vh;
 }
 
+/* ----- Grid de estructuración ----- */
 .grid-estructuracion {
     margin: 0 auto;
     margin-top: 200px;
@@ -22,21 +29,63 @@ body {
     grid-template-rows: 0.8fr;
 }
 
+/* ----- Item 1 (logo) ----- */
 .item1 {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* ----- Item 2 (enlace) ----- */
 .item2 {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* ----- Enlace principal ----- */
 a {
     text-decoration: none;
     color: var(--color-white);
     font-size: larger;
     font-weight: 600;
+    padding: var(--spacing-large) var(--spacing-xlarge);
+    background: var(--bg-glass);
+    border-radius: var(--border-radius-large);
+}
+
+/* ========================================
+   TABLET (768px+)
+   ======================================== */
+@media (min-width: 768px) {
+    .grid-estructuracion {
+        width: 60vw;
+        height: 40vh;
+        margin-top: 150px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: var(--spacing-xlarge);
+    }
+
+    a {
+        font-size: x-large;
+        padding: var(--spacing-xlarge) var(--spacing-xxlarge);
+    }
+}
+
+/* ========================================
+   DESKTOP (1024px+)
+   ======================================== */
+@media (min-width: 1024px) {
+    .grid-estructuracion {
+        width: 50vw;
+        max-width: 800px;
+        height: 50vh;
+        margin-top: 120px;
+        gap: var(--spacing-xxlarge);
+    }
+
+    a {
+        font-size: xx-large;
+    }
 }

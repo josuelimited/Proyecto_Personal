@@ -33,6 +33,8 @@
     --border-radius-full: 30px;
 
     --max-width-mobile: 370px;
+    --max-width-tablet: 768px;
+    --max-width-desktop: 1200px;
 
     --spacing-small: 8px;
     --spacing-medium: 10px;

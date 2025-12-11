@@ -1,11 +1,17 @@
+/* ========================================
+   CONTRATADO.CSS - Página de contratación exitosa
+   ======================================== */
+
 @import url('customproperties.css');
 
+/* ----- Reset básico ----- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ----- Estilos del body ----- */
 body {
     font-family: var(--font-family);
     background: linear-gradient(160deg, var(--color-primary-dark) 0%, var(--color-primary) 40%, var(--color-primary-light) 100%);
@@ -16,6 +22,7 @@ body {
     padding: var(--spacing-xlarge);
 }
 
+/* ----- Contenedor principal ----- */
 .contratado-container {
     width: 100%;
     max-width: var(--max-width-mobile);
@@ -26,6 +33,7 @@ body {
     text-align: center;
 }
 
+/* ----- Título principal ----- */
 .titulo {
     display: grid;
     grid-template-columns: 1fr;
@@ -38,6 +46,7 @@ body {
     font-weight: 700;
 }
 
+/* ----- Mensaje de éxito ----- */
 .mensaje-exito {
     display: grid;
     grid-template-columns: 1fr;
@@ -50,6 +59,7 @@ body {
     font-weight: 400;
 }
 
+/* ----- Card del empleador ----- */
 .card-empleador {
     background: var(--color-white);
     border-radius: var(--border-radius-medium);
@@ -60,12 +70,14 @@ body {
     gap: var(--spacing-large);
 }
 
+/* ----- Header del empleador ----- */
 .empleador-header {
     display: flex;
     align-items: center;
     gap: var(--spacing-large);
 }
 
+/* ----- Foto del empleador ----- */
 .foto-empleador {
     width: 60px;
     height: 60px;
@@ -73,6 +85,7 @@ body {
     object-fit: cover;
 }
 
+/* ----- Info del empleador ----- */
 .empleador-info {
     display: grid;
     grid-template-columns: 1fr;
@@ -81,18 +94,21 @@ body {
     text-align: left;
 }
 
+/* ----- Nombre del empleador ----- */
 .nombre-empleador {
     font-size: var(--font-size-large);
     color: var(--color-black);
     font-weight: 600;
 }
 
+/* ----- Empresa ----- */
 .empresa {
     font-size: var(--font-size-medium);
     color: var(--color-primary);
     font-weight: 500;
 }
 
+/* ----- Detalles del trabajo ----- */
 .trabajo-detalles {
     display: grid;
     grid-template-columns: 1fr;
@@ -108,6 +124,7 @@ body {
     color: #555555;
 }
 
+/* ----- Aviso de espera ----- */
 .aviso-espera {
     display: grid;
     grid-template-columns: 1fr;
@@ -120,6 +137,7 @@ body {
     font-weight: 400;
 }
 
+/* ----- Contador de tiempo ----- */
 .contador {
     display: flex;
     justify-content: center;
@@ -127,6 +145,7 @@ body {
     gap: var(--spacing-medium);
 }
 
+/* ----- Caja de tiempo ----- */
 .tiempo-box {
     background: rgba(255, 255, 255, 0.2);
     border-radius: var(--border-radius-small);
@@ -151,12 +170,14 @@ body {
     letter-spacing: 1px;
 }
 
+/* ----- Separador de tiempo ----- */
 .separador {
     font-size: 28px;
     color: var(--color-white);
     font-weight: 700;
 }
 
+/* ----- Botón volver ----- */
 .btn-volver {
     width: 180px;
     padding: 14px 30px;
@@ -173,4 +194,133 @@ body {
     margin-top: var(--spacing-medium);
     text-decoration: none;
     text-align: center;
+}
+
+/* ========================================
+   TABLET (768px+)
+   ======================================== */
+@media (min-width: 768px) {
+    .contratado-container {
+        max-width: 600px;
+        padding: var(--spacing-xxlarge);
+    }
+
+    .titulo h1 {
+        font-size: 32px;
+    }
+
+    .mensaje-exito p {
+        font-size: var(--font-size-xlarge);
+    }
+
+    .card-empleador {
+        padding: var(--spacing-xxlarge);
+    }
+
+    .foto-empleador {
+        width: 80px;
+        height: 80px;
+    }
+
+    .nombre-empleador {
+        font-size: var(--font-size-xlarge);
+    }
+
+    .empresa {
+        font-size: var(--font-size-large);
+    }
+
+    .trabajo-detalles p {
+        font-size: var(--font-size-base);
+    }
+
+    .tiempo-box {
+        min-width: 90px;
+        padding: var(--spacing-xlarge) var(--spacing-large);
+    }
+
+    .tiempo-box .numero {
+        font-size: 36px;
+    }
+
+    .separador {
+        font-size: 36px;
+    }
+
+    .btn-volver {
+        width: 220px;
+        padding: 16px 40px;
+        font-size: var(--font-size-base);
+    }
+}
+
+/* ========================================
+   DESKTOP (1024px+)
+   ======================================== */
+@media (min-width: 1024px) {
+    .contratado-container {
+        max-width: 700px;
+        gap: var(--spacing-xxlarge);
+    }
+
+    .titulo h1 {
+        font-size: 40px;
+    }
+
+    .mensaje-exito p {
+        font-size: 20px;
+    }
+
+    .card-empleador {
+        padding: 40px;
+        gap: var(--spacing-xlarge);
+    }
+
+    .foto-empleador {
+        width: 100px;
+        height: 100px;
+    }
+
+    .nombre-empleador {
+        font-size: 22px;
+    }
+
+    .empresa {
+        font-size: var(--font-size-xlarge);
+    }
+
+    .trabajo-detalles p {
+        font-size: var(--font-size-large);
+    }
+
+    .contador {
+        gap: var(--spacing-large);
+    }
+
+    .tiempo-box {
+        min-width: 110px;
+        padding: var(--spacing-xxlarge) var(--spacing-xlarge);
+    }
+
+    .tiempo-box .numero {
+        font-size: 44px;
+    }
+
+    .tiempo-box .etiqueta {
+        font-size: var(--font-size-medium);
+    }
+
+    .separador {
+        font-size: 44px;
+    }
+
+    .aviso-espera p {
+        font-size: var(--font-size-large);
+    }
+
+    .btn-volver {
+        width: 250px;
+        padding: 18px 50px;
+        font-size: var(--font-size-large);
+    }
 }
